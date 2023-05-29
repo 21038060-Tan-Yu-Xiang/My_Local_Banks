@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity((intentCall));
                     return true; //menu item successfully handled
                 }
-                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 2
                     if (tvDBS.getCurrentTextColor() == -1){
                         tvDBS.setTextColor(Color.RED);
                     }
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity((intentCall));
                     return true; //menu item successfully handled
                 }
-                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 2
                     if (tvDBS.getCurrentTextColor() == -1){
                         tvDBS.setTextColor(Color.RED);
                     }
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity((intentCall));
                     return true; //menu item successfully handled
                 }
-                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 2
                     if (tvDBS.getCurrentTextColor() == -1){
                         tvDBS.setTextColor(Color.RED);
                     }
