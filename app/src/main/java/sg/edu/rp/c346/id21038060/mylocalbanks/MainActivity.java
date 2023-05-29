@@ -3,8 +3,10 @@ package sg.edu.rp.c346.id21038060.mylocalbanks;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         menu.add(0, 0, 0, "Website");
         menu.add(0, 1, 1, "Contact the Bank");
+        menu.add(0,2,2,"Toggle Favourite");
 
         if (v == tvDBS){
             bankClicked = "DBS";
@@ -94,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity((intentCall));
                     return true; //menu item successfully handled
                 }
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                    if (tvDBS.getCurrentTextColor() == -1){
+                        tvDBS.setTextColor(Color.RED);
+                    }
+                    else {
+                        tvDBS.setTextColor(Color.WHITE);
+                    }
+                    return true; //menu item successfully handled
+                }
                 break;
             case "OCBC":
                 if (item.getItemId() == 0) { //check whether the selected menu item ID is 0
@@ -105,6 +117,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity((intentCall));
                     return true; //menu item successfully handled
                 }
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                    if (tvDBS.getCurrentTextColor() == -1){
+                        tvDBS.setTextColor(Color.RED);
+                    }
+                    else {
+                        tvDBS.setTextColor(Color.WHITE);
+                    }
+                    return true; //menu item successfully handled
+                }
                 break;
             case "UOB":
                 if (item.getItemId() == 0) { //check whether the selected menu item ID is 0
@@ -114,6 +135,15 @@ public class MainActivity extends AppCompatActivity {
                 } else if (item.getItemId() == 1) { //check whether the selected menu item ID is 1
                     Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18002222121L));
                     startActivity((intentCall));
+                    return true; //menu item successfully handled
+                }
+                else if (item.getItemId() == 2) { //check whether the selected menu item ID is 1
+                    if (tvDBS.getCurrentTextColor() == -1){
+                        tvDBS.setTextColor(Color.RED);
+                    }
+                    else {
+                        tvDBS.setTextColor(Color.WHITE);
+                    }
                     return true; //menu item successfully handled
                 }
                 break;
